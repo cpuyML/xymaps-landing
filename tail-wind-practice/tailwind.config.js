@@ -5,19 +5,17 @@ module.exports = {
   },
   purge: [],
   theme: {
-    container: {
-      center: true,
-      padding: '7rem',
-      margin: '1rem'
-    },
     extend: {
+      
       animation: {
-        'slide': 'slide 7s ease infinite'
+        'slide': 'slide 10s ease-in-out infinite alternate'
       },
+
       keyframes: {
         slide: {
-          "0%": {transform: "rotate(0)"},
-          "100%": {transform: "rotate(360deg)"}
+          "0%": {transform: "rotate(65deg)"},
+          "50%": {transform: "rotate(0)"},
+          "100%": {transform: "rotate(-65deg)"},
         }
       }
     }
