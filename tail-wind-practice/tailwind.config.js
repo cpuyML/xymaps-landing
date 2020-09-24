@@ -7,10 +7,19 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '2rem'
+      padding: '7rem',
+      margin: '1rem'
     },
-    extend: {},
-  },
-  variants: {},
-  plugins: [],
+    extend: {
+      animation: {
+        'slide': 'slide 7s ease infinite'
+      },
+      keyframes: {
+        slide: {
+          "0%": {transform: "rotate(0)"},
+          "100%": {transform: "rotate(360deg)"}
+        }
+      }
+    }
+  }
 }
