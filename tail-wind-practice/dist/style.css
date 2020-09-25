@@ -588,10 +588,6 @@ video {
 
 .container {
   width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 2rem;
-  padding-left: 2rem;
 }
 
 @media (min-width: 640px) {
@@ -21213,6 +21209,34 @@ video {
   }
 }
 
+@-webkit-keyframes slide {
+  0% {
+    transform: rotate(65deg);
+  }
+
+  50% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(-65deg);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: rotate(65deg);
+  }
+
+  50% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(-65deg);
+  }
+}
+
 .animate-none {
   -webkit-animation: none;
           animation: none;
@@ -21238,13 +21262,14 @@ video {
           animation: bounce 1s infinite;
 }
 
+.animate-slide {
+  -webkit-animation: slide 10s ease-in-out infinite alternate;
+          animation: slide 10s ease-in-out infinite alternate;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 2rem;
-    padding-left: 2rem;
   }
 
   @media (min-width: 640px) {
@@ -41824,15 +41849,16 @@ video {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
+
+  .sm\:animate-slide {
+    -webkit-animation: slide 10s ease-in-out infinite alternate;
+            animation: slide 10s ease-in-out infinite alternate;
+  }
 }
 
 @media (min-width: 768px) {
   .md\:container {
     width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 2rem;
-    padding-left: 2rem;
   }
 
   @media (min-width: 640px) {
@@ -62412,15 +62438,16 @@ video {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
+
+  .md\:animate-slide {
+    -webkit-animation: slide 10s ease-in-out infinite alternate;
+            animation: slide 10s ease-in-out infinite alternate;
+  }
 }
 
 @media (min-width: 1024px) {
   .lg\:container {
     width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 2rem;
-    padding-left: 2rem;
   }
 
   @media (min-width: 640px) {
@@ -83000,15 +83027,16 @@ video {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
   }
+
+  .lg\:animate-slide {
+    -webkit-animation: slide 10s ease-in-out infinite alternate;
+            animation: slide 10s ease-in-out infinite alternate;
+  }
 }
 
 @media (min-width: 1280px) {
   .xl\:container {
     width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 2rem;
-    padding-left: 2rem;
   }
 
   @media (min-width: 640px) {
@@ -103587,5 +103615,10 @@ video {
   .xl\:animate-bounce {
     -webkit-animation: bounce 1s infinite;
             animation: bounce 1s infinite;
+  }
+
+  .xl\:animate-slide {
+    -webkit-animation: slide 10s ease-in-out infinite alternate;
+            animation: slide 10s ease-in-out infinite alternate;
   }
 }
